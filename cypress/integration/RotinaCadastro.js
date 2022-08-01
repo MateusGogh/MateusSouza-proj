@@ -34,7 +34,7 @@ describe("Rotina Cadastro",()=>{
             cy.get('div[class="form-group py-1"]').should('contain',Cypress.env("erroEmailObrig"))
         })
     
-        it("Cadastro sem sobrenome",()=>{        
+        it("Cadastro com Nome sem Sobrenome",()=>{        
             cy.get(`input[name="name"]`).type(Cypress.env("nome"));
             cy.get(`input[name="email"]`).type(Cypress.env("email"));
             cy.get(`input[name="password"]`).type(Cypress.env("senha"));
