@@ -12,6 +12,14 @@ describe("Rotina Cadastro",()=>{
       })
 
     context("Erros de Cadastro",()=>{
+        
+        it("Cadastro sem Informação",()=>{        
+            cy.get('button[type="submit"]').contains("Cadastrar").click()
+            cy.get('div[class="form-group py-1"]')
+                .should('contain',Cypress.env("erroNomeObrig"))
+                .should('contain',Cypress.env("erroEmailObrig"))
+                .should('contain',Cypress.env("erroSenhaObrig"))
+        })
     
         it("Cadastro Faltando Nome",()=>{        
             cy.get(`input[name="email"]`).type(Cypress.env("email"));
@@ -32,7 +40,7 @@ describe("Rotina Cadastro",()=>{
             cy.get(`input[name="password"]`).type(Cypress.env("senha"));
             cy.get('button[type="submit"]').contains("Cadastrar").click()
             cy.get('div[class="form-group py-1"]').should('contain',Cypress.env("erroEmailObrig"))
-        })
+        })      
     
         it("Cadastro com Nome sem Sobrenome",()=>{        
             cy.get(`input[name="name"]`).type(Cypress.env("nome"));
