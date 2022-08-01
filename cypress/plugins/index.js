@@ -31,6 +31,6 @@ function getConfigurationByFile(file){
 }
 
 module.exports = (on, config) =>{
-  const file = config.env.configFile || 'base'
+  const file = config.env.configFile || 'variaveis'
   return getConfigurationByFile(file)
 }
