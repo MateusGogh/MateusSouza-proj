@@ -1,0 +1,22 @@
+{
+    "chromeWebSecurity": false,
+    
+    "env":  {
+        "email": "emanuel.eduardo@teste.com.br",
+        "senha": "senhaTeste",
+        "nome": "Emanuel",
+        "sobrenome": "Eduardo",
+    
+        "emailAlterado": "josefa.bianca@alterado.com.br",
+        "nomeAlterado" : "Josefa Bianca Mirella",
+    
+        "erroNomeObrig": "O campo Nome é obrigatório.",
+        "erroSenhaObrig": "O campo Password é obrigatório.",
+        "erroEmailObrig": "O campo Email é obrigatório.",
+        "erroSobrenomeObrig": "Insira um Nome e Sobrenome válido.",
+    
+        "mensagemCadastro": "Usuário cadastrado com sucesso.",
+        "mensagemEdicao": "Usuário salvo com sucesso.",
+        "mensagemExcluir": "Usuário removido com sucesso."
+    }
+}
