@@ -7,11 +7,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.4.2
       - name: Cypress.io
-        uses: cypress-io/github-action@v4.2.0
+        uses: cypress-io/github-action@v2
         with:
           command: npx cypress run --record --key 5d2f24e6-de9f-4a6e-a295-8e1512f83aa9
           record: true
           parallel: true
-          
-        env:    
-          CYPRESS_RECORD_KEY: "5d2f24e6-de9f-4a6e-a295-8e1512f83aa9"
+    
